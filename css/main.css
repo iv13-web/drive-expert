@@ -40,7 +40,7 @@
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
+/*    line-height: 1.5;*/
   }
 
   ul[class],
@@ -80,17 +80,17 @@
 
   /*HEADER*/
 
-  header {
-    position: sticky;
+  .header {
+    height: 11.5rem;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
-/*    background-color: rgba(0, 0, 0, .7)*/
   }
 
   .hero {
     background-color: #000;
-
+    margin-top: 14rem;
   }
 
   .hero-background {
@@ -314,7 +314,7 @@
 
   .phone-front {
     position: relative;
-    left: 1rem;
+    left: .5rem;
   }
 
   .phone-back {
@@ -471,6 +471,10 @@
 
   /*OFFER*/
 
+  .offer {
+    margin-bottom: 4.8rem;
+  }
+
   .offer-heading {
     margin-bottom: 2.4rem;
   }
@@ -496,8 +500,6 @@
   }
 
   .offer-os {
-    display: flex;
-    align-items: center;
     padding-bottom: .9rem;
     position: relative;
   }
@@ -537,14 +539,136 @@
     }
 
 
+/*TABLE*/
 
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #000;
+  }
 
+  .table-upside-left {
+    align-self: flex-end;
+    color: rgba(134,139,143,1);
+    width: 25%;
+  }
 
+  .table-upside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+  }
 
+  .table-upside-marked {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+  }
 
+  .table-upside-marked:before {
+    position: absolute;
+    content: '';
+    background-color: rgba(190,190,190, .1);
+    width: 100%;
+    height: 138%;
+    top: -2.4rem;
+    left: 0;
+  }
 
+  .table-upside-title {
+    margin-bottom: .8rem;
+  }
 
+  .table-upside-price {
+    display: flex;
+    margin-bottom: .8rem;
+  }
 
+  .table-currency {
+    font-size: 2rem;
+    padding-top: .24em;
+    line-height: 2rem;
+  }
+
+  .table-sum {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+  .table-upside-button {
+    line-height: 1.2rem;
+    font-family: GilroyBold;
+    padding: 1rem;
+    border-radius: .6rem;
+    border: 1px solid #E61830;
+    color: #E61830;
+    text-transform: uppercase;
+  }
+
+  .table-upside-button-active {
+    line-height: 1.2rem;
+    font-family: GilroyBold;
+    padding: 1rem;
+    border-radius: .6rem;
+    border: 1px solid #E61830;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #E61830;
+  }
+
+  .table-body {
+    display: flex;
+  }
+
+  .table-body-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 100%;
+    border-bottom: 1px solid #D3DEE7;
+  }
+
+  .table-body-cell:last-child {
+    border: none;
+  }
+
+  .table-body-cell p {
+    line-height: 2.4rem;
+  }
+
+  .table-body-descriptions {
+    width: 25%;
+  }
+
+  .table-body-stickers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+    align-items: center;
+  }
+
+  .table-body-stickers-marked{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+    align-items: center;
+  }
+
+    .table-body-stickers-marked:before {
+    position: absolute;
+    content: '';
+    background-color: rgba(190,190,190, .1);
+    width: 100%;
+    height: 100%;
+    }
 
 
   @font-face {
