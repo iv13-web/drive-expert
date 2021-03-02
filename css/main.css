@@ -101,7 +101,6 @@
   /*HEADER*/
 
   .header {
-    height: 11.5rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -212,7 +211,6 @@
     border-top: 1px solid rgba(255,255,255,.3);
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8rem;
   }
 
   .header-nav-left {
@@ -230,12 +228,16 @@
     justify-content: center;
   }
 
-  .nav-link {
+  .nav-links {
     margin-right: 2.4rem;
   }
 
-  .nav-link:last-child {
+  .nav-links:last-child {
     margin-right: 3.4rem;
+  }
+
+  .some-link:hover {
+    opacity: .5;
   }
 
   .nav-button {
@@ -317,11 +319,22 @@
   .icon:first-child {
     background-color: #fff;
     margin-right: 1.2rem;
+    transition: .1s all ease;
   }
 
   .icon:last-child {
     background-color: #E61830;
+    transition: .1s all ease;
   }
+
+  .icon:hover.icon:first-child {
+    background-color: #a0a0a0;
+  }
+
+  .icon:hover.icon:last-child {
+    background-color: #980F1F;
+  }
+
 
   .icon-picture {
     margin-right: .7rem;
@@ -632,17 +645,6 @@
     position: relative;
   }
 
-/*  .table-upside-button-active {
-    line-height: 1.2rem;
-    font-weight: 800;
-    padding: 1rem;
-    border-radius: .6rem;
-    border: 1px solid #E61830;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #E61830;
-  }
-*/
   .table-upside-button:hover {
     background-color: #E61830;
     color: #fff;
