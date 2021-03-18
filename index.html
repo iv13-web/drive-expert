@@ -6,6 +6,7 @@
   <title>Drive Expert</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
             <div class="menu">
               <div class="menu-link">
                 <a class="some-link menu-text" href="">О нас</a>
-              </div>            </div>
+              </div>            
               <div class="menu-link">
                 <a class="some-link menu-text" href="">Новости</a>
               </div>
@@ -25,24 +26,25 @@
                 <a class="some-link menu-text" href="">Контакты</a>
               </div>
             </div>
-            <div class="header-menu-right">
-              <a class="some-link menu-link-language" href="">
-                <div class="language-selector">
-                  <img class="language-img" src="img/rus-lang2.png" alt="">
-                  <p class="menu-text">Русский</p>
-                </div>
-              </a>
-              <a class="some-link" href="">
-                <div class="profile-selector">
-                  <img class="profile-img" src="img/profile-icon.svg" alt="">
-                  <p class="menu-text">Личный кабинет</p>
-                </div>
-              </a>
-            </div>
           </div>
+          <div class="header-menu-right">
+            <a class="some-link menu-link-language" href="">
+              <div class="language-selector">
+                <img class="language-img" src="img/rus-lang2.png" alt="">
+                <p class="menu-text">Русский</p>
+              </div>
+            </a>
+            <a class="some-link" href="">
+              <div class="profile-selector">
+                <img class="profile-img" src="img/profile-icon.svg" alt="">
+                <p class="menu-text">Личный кабинет</p>
+              </div>
+            </a>
+          </div>
+        </div>
         <div class="header-nav">
           <a class="header-nav-left" href="">
-            <img src="img/driveexpert-logo.svg" alt="">
+            <img class="header-logo" src="img/driveexpert-logo.svg" alt="">
           </a>
           <div class="header-nav-right">
             <div class="nav">
@@ -430,7 +432,7 @@
             Приложение выставляет оценку после завершения круга
           </p>
           <p class="small-title">
-            Учитывается не только скорость прохождения, но и безопасность и стиль вождения. Лучшие результаты попадают в таблицу рекордов и отображаются на сайте. А вы сможете обогнать Дениса?
+            Учитывается не только скорость прохождения, но безопасность и стиль вождения. Лучшие результаты попадают в таблицу рекордов и отображаются на сайте. А вы сможете обогнать Дениса?
           </p>
         </div>
         <div class="results-table">
@@ -550,13 +552,28 @@
 
 
 
-
-
-
-
-
-
-
+    <section class="section">
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
 
 
 
@@ -567,6 +584,8 @@
   <footer>
     
   </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
