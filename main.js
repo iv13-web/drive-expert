@@ -11,12 +11,17 @@ var swiper = new Swiper('.swiper-container', {
     }
 });
 
-const header = document.querySelector('.header')
-const menuLinks = document.querySelectorAll('.some-link')
-const headerNav = document.querySelector('.header-nav')
-const headerLogo = document.querySelector('.header-logo')
-const headerProfile = document.querySelector('.profile-img')
-const navButton = document.querySelector('.nav-button')
+const header = document.querySelector('.header');
+const menuLinks = document.querySelectorAll('.some-link');
+const headerMenu = document.querySelector('.header-menu');
+const headerLogo = document.querySelector('.header-logo');
+const headerProfile = document.querySelector('.profile-img');
+const navButton = document.querySelector('.nav-button');
+const burgerMenu = document.querySelector('.burger');
+const burgerMenuLines = document.querySelector('.burger span');
+const mobileMenu = document.querySelector('.mobile-menu')
+const body = document.getElementsByTagName('body')[0];
+
 
 /*для данной функции хотел применить делегирование событий, а не цикл, 
 но т.к. из-за position fixed не получается повесить event scroll на .header, а приходится вешать
@@ -30,10 +35,11 @@ window.addEventListener('scroll', function() {
     }*/
     if (window.scrollY !== 0) {
         header.classList.add('header-scroll');
-        headerNav.classList.add('header-nav-scroll');
+        headerMenu.classList.add('header-nav-scroll');
         headerLogo.setAttribute('src', 'img/driveexpert-logo-scroll.svg');
         headerProfile.setAttribute('src', 'img/profile-icon-scroll.svg');
-        
+        burgerMenuLines.classList.add('black');
+
         navButton.addEventListener('mouseenter', function() { 
             navButton.classList.add('nav-button-scroll');
         })
@@ -44,12 +50,12 @@ window.addEventListener('scroll', function() {
         for (let i = 0; i < menuLinks.length; i++) {
             menuLinks[i].classList.add('menu-text-scroll');
         }
-        
     } else {
         header.classList.remove('header-scroll');
-        headerNav.classList.remove('header-nav-scroll');
+        headerMenu.classList.remove('header-nav-scroll');
         headerLogo.setAttribute('src', 'img/driveexpert-logo.svg');
         headerProfile.setAttribute('src', 'img/profile-icon.svg');
+        burgerMenuLines.classList.remove('black');
 
         navButton.addEventListener('mouseenter', function() {
             navButton.classList.remove('nav-button-scroll');
@@ -61,7 +67,33 @@ window.addEventListener('scroll', function() {
         for (let i = 0; i < menuLinks.length; i++) {
             menuLinks[i].classList.remove('menu-text-scroll');
         }
-    }
+    } 
 })
+
+burgerMenu.addEventListener('click', function(){
+    burgerMenuLines.classList.toggle('active');
+    mobileMenu.classList.toggle('mobile-menu-active');
+    body.classList.toggle('stop-scrolling');
+
+    
+
+    if (window.scrollY == 0) {
+        burgerMenuLines.classList.toggle('black');
+
+        if(mobileMenu.classList.contains('mobile-menu-active')) {
+            headerLogo.setAttribute('src', 'img/driveexpert-logo-scroll.svg')
+        } else {
+            headerLogo.setAttribute('src', 'img/driveexpert-logo.svg')
+        }
+
+        navButton.addEventListener('mouseenter', function() { 
+            navButton.classList.add('nav-button-scroll');
+        })
+        navButton.addEventListener('mouseleave', function() {
+            navButton.classList.remove('nav-button-scroll');
+        })
+    } 
+})
+
 
 
