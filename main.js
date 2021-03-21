@@ -23,11 +23,6 @@ const mobileMenu = document.querySelector('.mobile-menu')
 const body = document.getElementsByTagName('body')[0];
 
 
-/*для данной функции хотел применить делегирование событий, а не цикл, 
-но т.к. из-за position fixed не получается повесить event scroll на .header, а приходится вешать
-event на все окно window, то появляется проблема. Стоит ли применять тут делегирование событий или можно 
-оставить цикл для перебора querySelectorAll*/
-
 window.addEventListener('scroll', function() {
     /*хотел сократить часть коди ниже, чтобы строка, например, header.classList.add, формировалась сама
     function classAction(object, action) {
@@ -68,16 +63,14 @@ window.addEventListener('scroll', function() {
             menuLinks[i].classList.remove('menu-text-scroll');
         }
     } 
-})
+});
 
 burgerMenu.addEventListener('click', function(){
     burgerMenuLines.classList.toggle('active');
     mobileMenu.classList.toggle('mobile-menu-active');
     body.classList.toggle('stop-scrolling');
 
-    
-
-    if (window.scrollY == 0) {
+    if (window.scrollY === 0) {
         burgerMenuLines.classList.toggle('black');
 
         if(mobileMenu.classList.contains('mobile-menu-active')) {
@@ -93,7 +86,7 @@ burgerMenu.addEventListener('click', function(){
             navButton.classList.remove('nav-button-scroll');
         })
     } 
-})
+});
 
 
 

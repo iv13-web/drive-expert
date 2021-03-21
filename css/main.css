@@ -103,12 +103,14 @@ section {
   background-color: #fff;
   height: 100%;
   width: 100%;
-  top: -74rem;
+  top: -110rem;
   transition: all .3s ease;
+  /* display: none; */
 }
 
 .mobile-menu-active {
   top: 0;
+
 }
 
 .stop-scrolling {
@@ -507,7 +509,7 @@ color: #E61830;
 }
 
 .card-content {
-  margin: 6.4rem 6.4rem 4rem 6.4rem;
+  padding: 6.4rem 6.4rem 4rem 6.4rem;
 }
 
 .card-title {
@@ -743,9 +745,9 @@ color: #E61830;
 
 /*MAP*---------------------------------------------------------------------------*/
 
-  .map-section {
-    position: relative;
-  }
+.map-section {
+  position: relative;
+}
 
 .map-image-section {
   position: relative;
@@ -768,14 +770,18 @@ color: #E61830;
 }
 
 .map-content {
-  display: flex;
   height: 100%;
-  justify-content: space-between;
   left: 0;
-  padding: 4.8rem 0;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.map-wrapper {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  padding: 3rem 0;
 }
 
 .map-content-small {
@@ -1086,17 +1092,26 @@ padding: 10px;
 
 
 
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .container {
-    width: 1000px;
-    }
+    width: 100%;
+    padding: 0 3%;
+  }
+
+  .card-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 3.2rem;
+  }
+
+  .table-offer-cell p {
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+  }
 }
 
+@media (max-width: 1000px) {
 
-@media (max-width: 1050px) {
-  .container {
-    width: 700px;
-  }
   .hero-content-right {
     display: none;
   }
@@ -1104,16 +1119,49 @@ padding: 10px;
     font-size: 5rem;
     line-height: 48px;
   } 
-  .hero-background {
-    /* height: 80vh; */
-  }
 
   .hero {
     background-color: transparent;
   }
-}
 
-@media (max-width: 792px) {
+  .card-title {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+
+  .card-content {
+    padding: 6.4rem 4.4rem 1rem 4.4rem;
+  }
+
+  .card img {
+    margin-bottom: 3rem;
+  }
+  .big-logo-section img:last-child {
+    margin: auto;
+    max-height: 26rem;
+  }
+
+  .table-offer-cell p {
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+  }
+
+  .table-sum {
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+  }
+
+  .table-upside-button {
+    font-size: 1.2rem;
+  }
+} 
+
+
+
+
+
+
+@media (max-width: 768px) {
   .header {
     border-bottom: 1px solid rgba(255,255,255,.3);
   }
@@ -1141,15 +1189,22 @@ padding: 10px;
   .download {
     padding-right: 2.4rem;
   }
-}
 
-@media (max-width: 500px) {
   .download-icons {
     display: block;
   }
-
   .icon:first-child {
     margin-bottom: 1.6rem;
   }
+
+  .hero-medium-text {
+
+    line-height: 2.4rem;
+}
+}
+
+@media (max-width: 500px) {
+
+
 }
 
