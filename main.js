@@ -1,18 +1,29 @@
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 4,
-    spaceBetween: 30,
+let swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 50,
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      el: '.swiper-pagination',
+      clickable: true
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      }, 
+      1000: {
+          slidesPerView: 2
+      },
+      1200: {
+          slidesPerView: 3
+      }
     }
 });
 
 const header = document.querySelector('.header');
-const menuLinks = document.querySelectorAll('.some-link');
+const menuLinks = document.querySelectorAll('.nav-link');
 const headerMenu = document.querySelector('.header-menu');
 const headerLogo = document.querySelector('.header-logo');
 const headerProfile = document.querySelector('.profile-img');
@@ -31,7 +42,7 @@ window.addEventListener('scroll', function() {
     if (window.scrollY !== 0) {
         header.classList.add('header-scroll');
         headerMenu.classList.add('header-nav-scroll');
-        headerLogo.setAttribute('src', 'img/driveexpert-logo-scroll.svg');
+        headerLogo.setAttribute('src', 'img/drive-expert-red-black.svg');
         headerProfile.setAttribute('src', 'img/profile-icon-scroll.svg');
         burgerMenuLines.classList.add('black');
 

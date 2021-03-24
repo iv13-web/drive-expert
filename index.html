@@ -11,7 +11,6 @@
 </head>
 <body>
   <div class="mobile-menu">
-    
   </div>
   <header>  
     <div class="header">
@@ -20,24 +19,24 @@
           <div class="header-menu-left">
             <div class="menu">
               <div class="menu-link">
-                <a class="some-link menu-text" href="">О нас</a>
+                <a class="nav-link menu-text" href="">О нас</a>
               </div>            
               <div class="menu-link">
-                <a class="some-link menu-text" href="">Новости</a>
+                <a class="nav-link menu-text" href="">Новости</a>
               </div>
               <div class="menu-link">
-                <a class="some-link menu-text" href="">Контакты</a>
+                <a class="nav-link menu-text" href="">Контакты</a>
               </div>
             </div>
           </div>
           <div class="header-menu-right">
-            <a class="some-link menu-link-language" href="">
+            <a class="nav-link menu-link-language" href="">
               <div class="language-selector">
                 <img class="language-img" src="img/rus-lang2.png" alt="">
                 <p class="menu-text">Русский</p>
               </div>
             </a>
-            <a class="some-link" href="">
+            <a class="nav-link" href="">
               <div class="profile-selector">
                 <img class="profile-img" src="img/profile-icon.svg" alt="">
                 <p class="menu-text">Личный кабинет</p>
@@ -47,18 +46,18 @@
         </div>
         <div class="header-nav">
           <a class="header-nav-left" href="">
-            <img class="header-logo" src="img/driveexpert-logo.svg" alt="">
+            <img class="header-logo" src="img/drive-expert-white.svg" alt="">
           </a>
           <div class="header-nav-right">
             <div class="nav">
               <div class="nav-links">
-                <a class="some-link" href=""><span>О приложении</span></a>
+                <a class="nav-link" href=""><span>О приложении</span></a>
               </div>
               <div class="nav-links">
-                <a class="some-link" href="">Поддержка</a>
+                <a class="nav-link" href="">Поддержка</a>
               </div>
               <div class="nav-links">
-                <a class="some-link" href="">Рекорды</a>
+                <a class="nav-link" href="">Рекорды</a>
               </div>
             </div>
             <div class="download">
@@ -72,7 +71,7 @@
       </div>
     </div>
   </header>
-  <section>
+  <section class="hero-section">
     <div class="hero">
       <img class="hero-background" src="img/header-background.png" alt="">
       <div class="hero-content container">
@@ -130,11 +129,8 @@
       </div>
     </div>
   </section>
-
-  
-
   <main>
-    <section>
+    <section class="cards-section">
       <div class="container">
         <p class="section-text">Преимущества</p>
         <div class="card-section">
@@ -400,9 +396,7 @@
           <img class="map-image" src="img/map.png" alt="">
         </div>
         <div class="container map-content">
-
           <div class="map-wrapper">
-
             <img class="map-route"src="img/nurburgring.svg" alt="">
             <div class="map-content-small">
               <div>Доступные трассы</div>
@@ -432,16 +426,13 @@
                 </svg>
               </div>
             </div>
-          
           </div>
-
-
         </div>
       </div>
     </section>
     <section>
       <div class="container">
-        <div class="results-heading">
+        <div class="section-heading">
           <p class="big-title">
             Приложение выставляет оценку после завершения круга
           </p>
@@ -559,46 +550,165 @@
             <div class="table-results-cell">6:44.97</div>
           </div>
         </div>
-      </div>
-
-
-    </section>
-
-
-
-    <section class="section">
-      <!-- Swiper -->
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-          <div class="swiper-slide">Slide 10</div>
+        <div class="all-results-modal">
+          <a href="" class="all-results">
+            <div class="all-results-button">
+              <svg class = "" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.3" cx="20" cy="20" r="19.5" stroke="#E61830"/>
+                <circle class="cicrle" opacity="0.3" cx="20" cy="20" r="19.5" stroke="#E61830"/>
+              </svg>    
+            </div>
+            <div class="all-results-text">все результаты</div>
+          </a>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
     </section>
+    <section>
+      <div class="slider-container"> 
+        <div class="section-heading">
+          <p class="big-title">Приложения от гонщиков для гонщиков</p>
+          <p class="small-title">Мы знаем толк в гонках. Для нас было целью создать приложение которое было бы полезно фанатам гонок. Для таких же как мы.</p>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="racer-card">
+                <img class="racer-img" src="./img/racer.png" alt="">
+                <div class="racer-card-info">
+                  <p class="racer-card-title">Денис Малеваный</p>
+                  <p class="racer-card-subtitle">Руководство проекта и техническая реализация</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="racer-card">
+                <img class="racer-img" src="./img/racer.png" alt="">
+                <div class="racer-card-info">
+                  <p class="racer-card-title">Михаил Горбачёв</p>
+                  <p class="racer-card-subtitle">Методологические обучающие материалы</p>
+                </div>
+              </div>
 
-
-
-
-
+            </div>
+            <div class="swiper-slide">
+              <div class="racer-card">
+                <img class="racer-img" src="./img/racer.png" alt="">
+                <div class="racer-card-info">
+                  <p class="racer-card-title">Михаил Горбачёв</p>
+                  <p class="racer-card-subtitle">Методологические обучающие материалы</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="racer-card">
+                <img class="racer-img" src="./img/racer.png" alt="">
+                <div class="racer-card-info">
+                  <p class="racer-card-title">Михаил Горбачёв</p>
+                  <p class="racer-card-subtitle">Методологические обучающие материалы</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="racer-card">
+                <img class="racer-img" src="./img/racer.png" alt="">
+                <div class="racer-card-info">
+                  <p class="racer-card-title">Михаил Горбачёв</p>
+                  <p class="racer-card-subtitle">Методологические обучающие материалы</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="racer-card">
+                <img class="racer-img" src="./img/racer.png" alt="">
+                <div class="racer-card-info">
+                  <p class="racer-card-title">Михаил Горбачёв</p>
+                  <p class="racer-card-subtitle">Методологические обучающие материалы</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev racer-button">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.82823 4.99996L5.65723 2.17196L4.24323 0.756958L0.000226974 4.99996L4.24323 9.24296L5.65723 7.82796L2.82823 4.99996Z" fill="#121213"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next racer-button">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.17177 4.99996L0.342773 2.17196L1.75677 0.756958L5.99977 4.99996L1.75677 9.24296L0.342773 7.82796L3.17177 4.99996Z" fill="#121213"/>
+          </svg>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <p class="section-text">Новости</p>
+        <a href="" class="news-modal"> 
+          <div class="news-item">
+            <div class="new-item-left">
+              <p class="news-title">Обновлённая версия приложения 1.0.1 для Android</p>
+              <p class="news-date">02.05.2021</p>
+            </div>
+            <div class="news-item-right">
+              <img class="news-img" src="./img/android-news.svg" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="" class="news-modal"> 
+          <div class="news-item">
+            <div class="new-item-left">
+              <p class="news-title">Обновлённая версия приложения 1.0.1 для Android</p>
+              <p class="news-date">02.05.2021</p>
+            </div>
+            <div class="news-item-right">
+              <img class="news-img" src="./img/android-news.svg" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="" class="news-modal"> 
+          <div class="news-item">
+            <div class="new-item-left">
+              <p class="news-title">Обновлённая версия приложения 1.0.1 для Android</p>
+              <p class="news-date">02.05.2021</p>
+            </div>
+            <div class="news-item-right">
+              <img class="news-img" src="./img/android-news.svg" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
   </main>
-
-  <footer>
-    
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img src="./img/drive-expert-red-black.svg" alt="">
+          </div>
+          <div class="footer-navigation">
+            <a class="footer-nav-link" href="">О приложении</a>
+            <a class="footer-nav-link" href="">Поддержка</a>
+            <a class="footer-nav-link" href="">Рекорды</a>
+          </div>
+          <div class="footer-download-icons">  
+            <a class="footer-os-icon" href="">
+              <img src="./img/google-play-black.svg" alt="">
+            </a>
+            <a class="footer-os-icon" href="">
+              <img src="./img/apple-store-black.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-small-text">© DriveExpert, 2021</p>
+          <p class="footer-small-text">Политика конфиденциальности</p>
+          <p class="footer-small-text">Разработано в copyright</p>
+        </div>
+      </div>
+    </div>
   </footer>
-
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
