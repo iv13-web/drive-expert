@@ -1,0 +1,22 @@
+{
+  "name": "drive-expert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iv13-web/drive-expert.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iv13-web/drive-expert/issues"
+  },
+  "homepage": "https://github.com/iv13-web/drive-expert#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}
