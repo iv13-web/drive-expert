@@ -105,7 +105,7 @@ section {
   width: 100%;
   top: -110rem;
   transition: all .5s ease;
-  /* display: none; */
+
 }
 
 .mobile-menu-active {
@@ -130,15 +130,20 @@ section {
 
 .header-scroll {
   background-color: rgba(255,255,255,0.6);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px) saturate(180%);
 }
 
 .hero {
+  padding-top: 14rem;
+  height: 100vh;
+}
+
+.hero-section {
   background-color: #000;
-  margin-top: 14rem;
 }
 
 .hero-background {
+  animation: hero-animation 1s linear;
   background-color: #000;
   bottom: 0;
   height: 100vh;
@@ -149,6 +154,20 @@ section {
   right: 0;
   top: 0;
   width: 100%;
+}
+
+@keyframes hero-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-section {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -349,8 +368,9 @@ color: #E61830;
 
 .download-icons {
   display: inline-flex;
-  margin-bottom: 15rem;
 }
+
+
 
 .icon {
   border-radius: .4rem;
@@ -1477,7 +1497,7 @@ fill: #fff;
   }
 
   .slider-container {
-    width: 70rem;
+    width: 100%;
   }
 
   .footer-navigation {
@@ -1504,7 +1524,7 @@ fill: #fff;
   }
 
   .hero {
-    margin-top: 10rem;
+    padding-top: 10rem;
   }
 
   .hero-background {
@@ -1512,8 +1532,9 @@ fill: #fff;
   }
 
   .hero-section {
-    margin-bottom: 0;
-  }
+
+    margin-bottom: 10rem;
+}
 
   .cards-section {
     margin-top: -6rem;
@@ -1564,10 +1585,6 @@ fill: #fff;
     height: 36rem;
   }
 
-  .slider-container {
-    width: 45rem;
-  }
-
   .footer-bottom p {
     min-width: 60%;
   }
@@ -1585,6 +1602,24 @@ fill: #fff;
 }
 
 @media (max-width: 550px) {
+
+  .hero-background {
+    height: 100vh;
+    max-height: 32rem;
+    margin: auto;
+  }
+
+  .hero-bottom {
+    position: absolute;
+    bottom: 0;
+    
+  }
+
+  .download-icons {
+    display: flex;
+    align-items: flex-start;
+  }
+
   .card-section {
     flex-wrap: wrap;
   }
@@ -1613,9 +1648,7 @@ fill: #fff;
   .map-content {
     height: 95%;
   }
-}
-
-@media (max-width: 507px) {
+  
   .footer-content {
     padding: 4.8rem 0 4.8rem 2rem;
   }
@@ -1625,22 +1658,16 @@ fill: #fff;
     padding-bottom: 3rem;
     width: 100%;
   }
-
+  
   .footer-download-icons {
     padding-bottom: 0;
   }
-
+  
   .footer-bottom p {
     min-width: 100%;
   }
- 
+  
   .footer-nav-link {
     padding-bottom: 1rem;
   }
- }
-
-@media (max-width: 380px) {
-
-
-
 }
