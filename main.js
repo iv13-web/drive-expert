@@ -57,15 +57,15 @@ const navButton = document.querySelector('.nav-button');
 const burgerMenu = document.querySelector('.burger');
 const burgerMenuLines = document.querySelector('.burger span');
 const mobileMenu = document.querySelector('.mobile-menu')
-const body = document.getElementsByTagName('body')[0];
+const body = document.querySelector('body');
 
 
 window.addEventListener('scroll', function() {
-    /*хотел сократить часть коди ниже, чтобы строка, например, header.classList.add, формировалась сама
+    /*хотел сократить часть кода ниже, чтобы строка, например, header.classList.add, формировалась сама
     function classAction(object, action) {
         object.classList.action 
     }*/
-    if (window.scrollY !== 0) {
+    if (window.scrollY >= 80) {
         header.classList.add('header-scroll');
         headerMenu.classList.add('header-nav-scroll');
         headerLogo.setAttribute('src', 'img/drive-expert-red-black.svg');
@@ -85,7 +85,7 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('header-scroll');
         headerMenu.classList.remove('header-nav-scroll');
-        headerLogo.setAttribute('src', 'img/driveexpert-logo.svg');
+        headerLogo.setAttribute('src', 'img/drive-expert-white.svg');
         headerProfile.setAttribute('src', 'img/profile-icon.svg');
         burgerMenuLines.classList.remove('black');
 
