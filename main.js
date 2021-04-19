@@ -65,7 +65,7 @@ window.addEventListener('scroll', function() {
     function classAction(object, action) {
         object.classList.action 
     }*/
-    if (window.scrollY >= 40) {
+    if (window.scrollY >0 || window.scrollY >= 40) {
         header.classList.add('header-scroll');
         headerMenu.classList.add('header-nav-scroll');
         headerLogo.setAttribute('src', 'img/drive-expert-red-black.svg');
