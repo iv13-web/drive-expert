@@ -18,6 +18,6 @@
   "homepage": "https://github.com/iv13-web/drive-expert#readme",
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "swiper": "^6.5.7"
+    "swiper": "^6.5.9"
   }
 }
