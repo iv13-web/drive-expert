@@ -167,6 +167,7 @@ section {
 
 .hero-section {
   height: 100vh;
+  max-height: 700px;
   overflow: hidden;
 }
 
