@@ -31,6 +31,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  line-height: 1;
   font-family: 'Gilroy', sans-serif;
 }
 
@@ -70,6 +71,12 @@ ol[class] {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+p, i {
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -353,7 +360,6 @@ color: #E61830;
   font-size: 6.4rem;
   font-weight: 800;;
   letter-spacing: -0.01em;
-  line-height: 60px;
   margin-bottom: 2.4rem;
 }
 
@@ -537,8 +543,8 @@ color: #E61830;
   color: #000;
   font-size: 3.2rem;
   font-weight: 800;
-  line-height: 3.6rem;
   margin-bottom: 1.6rem;
+  line-height: 1.2;
 }
 
 .card-description {
@@ -655,25 +661,23 @@ color: #E61830;
   display: flex;
   flex-direction: column;
   width: 25%;
+  margin-bottom: 16px;
+  justify-content: center;
 }
 
 .table-upside-marked {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   position: relative;
-  width: 25%;
 }
 
 .table-upside-marked:before {
-  background-color: rgba(190,190,190, .1);
+  background-color: #F5F5F5;
   content: '';
-  height: 138%;
+  height: 200%;
   left: 0;
   position: absolute;
   top: -2.4rem;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
 }
 
 .table-upside-title {
@@ -687,13 +691,11 @@ color: #E61830;
 
 .table-currency {
   font-size: 2rem;
-  line-height: 2rem;
   padding-top: .24em;
 }
 
 .table-sum {
   font-size: 4.8rem;
-  line-height: 4.8rem;
 }
 
 .table-upside-button {
@@ -701,7 +703,6 @@ color: #E61830;
   border: 1px solid #E61830;
   color: #E61830;
   font-weight: 800;
-  line-height: 1.2rem;
   padding: 1rem;
   position: relative;
   text-transform: uppercase;
@@ -717,6 +718,20 @@ color: #E61830;
 .table-body {
   display: flex;
 }
+
+.table-toggle {
+  display: none;
+}
+
+
+.table-toggle:before {
+
+}
+
+.table-toggle:after {
+
+}
+
 
 .table-offer-cell {
   align-items: center;
@@ -756,11 +771,12 @@ color: #E61830;
 }
 
   .table-body-stickers-marked:before {
-  background-color: rgba(190,190,190, .1);
+  background-color: #f5f5f5;
   content: '';
   height: 100%;
   position: absolute;
   width: 100%;
+  z-index: -1;
   }
 
 
@@ -1024,6 +1040,7 @@ fill: #fff;
 }
 
 .all-results-button {
+  margin-bottom: 14px;
   display: inline-block;
   position: relative;
 }
@@ -1404,7 +1421,6 @@ fill: #fff;
   .card-title {
     font-size: 2.8rem;
     font-weight: 800;
-    line-height: 3.2rem;
   }
 
   .table-offer-cell p {
@@ -1452,7 +1468,6 @@ fill: #fff;
 
   .card-title {
     font-size: 2.2rem;
-    line-height: 2.6rem;
   }
 
   .card-content {
@@ -1535,7 +1550,7 @@ fill: #fff;
   .hero-section {
 
     margin-bottom: 10rem;
-}
+  }
 
   .cards-section {
     margin-top: -6rem;
@@ -1600,6 +1615,11 @@ fill: #fff;
   .footer-small-text:nth-child(2) {
     text-align: inherit;
   }
+
+
+
+  
+
 }
 
 @media (max-width: 550px) {
@@ -1670,5 +1690,93 @@ fill: #fff;
   
   .footer-nav-link {
     padding-bottom: 1rem;
+  }
+
+  .table-header {
+    flex-direction: column;
+    border: 0;
+  }
+
+  .table-body {
+    display: none;
+  }
+
+  .table-upside {
+    justify-content: space-between;
+  }
+
+  .table-upside-left {
+    display: none;
+  }
+
+  .table-upside-marked:before {
+    display: none;
+  }
+
+  .table-upside {
+    width: 100%;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    
+  }
+
+  .table-sum {
+    line-height: 1;
+  }
+
+  .table-upside-price {
+    display: none;
+  }
+
+  .table-upside-item-wrapper {
+    width: 40%;
+    margin-bottom: 8px;
+    
+  }
+  
+  .table-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .table-toggle:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color:#000;
+  }
+
+  .table-toggle:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color:#000;
+
+  }
+
+  .table-currency {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-top: .24em;
+    transform: translateY(-11px);
+    display: inline-block;
   }
 }
