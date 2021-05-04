@@ -141,6 +141,8 @@ section {
 
 .header-scroll {
   background-color: rgba(255,255,255,0.6);
+  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: saturate(0);
   backdrop-filter: blur(20px) saturate(0);
 }
 
@@ -1778,44 +1780,6 @@ fill: #fff;
     min-width: 16rem;
   }
 }
-
-/* @media (max-height: 420px) {
-
-  .hero-small-text {
-    display: none;
-  }
-
-  .hero-medium-text {
-    width: 30rem;
-  }
-
-  .hero-bottom {
-    position: absolute;
-    right: 3rem;
-    bottom: 4rem;
-} 
-  
-  .download-icons {
-    display: flex;
-    align-items: baseline;
-  }
-}
-
-@media (max-height: 320px) {
-  .hero-large-text {
-    width: 25rem;
-    font-size: 3rem;
-  }
-
-  .hero-medium-text {
-    margin-bottom: 1.8rem;
-  }
-
-  .hero-bottom {
-    bottom: 0;
-  }
-} */
-
 
 @media (max-height: 420px) {
 
