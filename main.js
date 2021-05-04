@@ -48,81 +48,16 @@ let mapSwiper = new Swiper('.slider-maps .swiper-container', {
 
 
 
-const header = document.querySelector('.header');
-const menuLinks = document.querySelectorAll('.nav-link');
-const headerMenu = document.querySelector('.header-menu');
-const headerLogo = document.querySelector('.header-logo');
-const headerProfile = document.querySelector('.profile-img');
-const navButton = document.querySelector('.nav-button');
-const burgerMenu = document.querySelector('.burger');
-const burgerMenuLines = document.querySelector('.burger span');
-const mobileMenu = document.querySelector('.mobile-menu')
-const body = document.querySelector('body');
-
 
 window.addEventListener('scroll', function() {
-    /*хотел сократить часть кода ниже, чтобы строка, например, header.classList.add, формировалась сама
-    function classAction(object, action) {
-        object.classList.action 
-    }*/
-    if (window.scrollY >0 || window.scrollY >= 40) {
-        header.classList.add('header-scroll');
-        headerMenu.classList.add('header-nav-scroll');
-        headerLogo.setAttribute('src', 'img/drive-expert-red-black.svg');
-        headerProfile.setAttribute('src', 'img/profile-icon-scroll.svg');
-        burgerMenuLines.classList.add('black');
-
-        navButton.addEventListener('mouseenter', function() { 
-            navButton.classList.add('nav-button-scroll');
-        })
-        navButton.addEventListener('mouseleave', function() {
-            navButton.classList.remove('nav-button-scroll');
-        })
-
-        for (let i = 0; i < menuLinks.length; i++) {
-            menuLinks[i].classList.add('menu-text-scroll');
-        }
-    } else {
-        header.classList.remove('header-scroll');
-        headerMenu.classList.remove('header-nav-scroll');
-        headerLogo.setAttribute('src', 'img/drive-expert-white.svg');
-        headerProfile.setAttribute('src', 'img/profile-icon.svg');
-        burgerMenuLines.classList.remove('black');
-
-        navButton.addEventListener('mouseenter', function() {
-            navButton.classList.remove('nav-button-scroll');
-        })
-        navButton.addEventListener('mouseleave', function() {
-            navButton.classList.remove('nav-button-scroll');
-        })
-
-        for (let i = 0; i < menuLinks.length; i++) {
-            menuLinks[i].classList.remove('menu-text-scroll');
-        }
-    } 
+    const header = document.querySelector('.header');
+    window.scrollY > 40 && header.classList.add('header-scroll');
+    window.scrollY === 0 && header.classList.remove('header-scroll');
 });
 
-burgerMenu.addEventListener('click', function(){
-    burgerMenuLines.classList.toggle('active');
-    mobileMenu.classList.toggle('mobile-menu-active');
-    body.classList.toggle('stop-scrolling');
-
-    if (window.scrollY === 0) {
-        burgerMenuLines.classList.toggle('black');
-
-        if(mobileMenu.classList.contains('mobile-menu-active')) {
-            headerLogo.setAttribute('src', 'img/driveexpert-logo-scroll.svg')
-        } else {
-            headerLogo.setAttribute('src', 'img/driveexpert-logo.svg')
-        }
-
-        navButton.addEventListener('mouseenter', function() { 
-            navButton.classList.add('nav-button-scroll');
-        })
-        navButton.addEventListener('mouseleave', function() {
-            navButton.classList.remove('nav-button-scroll');
-        })
-    } 
+document.querySelector('.burger').addEventListener('click', function() {
+    document.querySelector('.mobile-menu').classList.toggle('mobile-menu-active');
+    document.querySelector('body').classList.toggle('stop-scrolling');
 });
 
 
