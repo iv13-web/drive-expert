@@ -49,16 +49,23 @@ let mapSwiper = new Swiper('.slider-maps .swiper-container', {
 
 
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     window.scrollY > 40 && header.classList.add('header-scroll');
     window.scrollY === 0 && header.classList.remove('header-scroll');
 });
 
-document.querySelector('.burger').addEventListener('click', function() {
+document.querySelector('.burger').addEventListener('click', () => {
     document.querySelector('.mobile-menu').classList.toggle('mobile-menu-active');
     document.querySelector('body').classList.toggle('stop-scrolling');
 });
 
 
+document.querySelector('.offer-platforms').addEventListener('click', (event) => {
+    const target = event.target
+    if (target && target.classList.contains('offer-os') || 
+                  target.classList.contains('offer-os-link')) {
+        target.classList.toggle('offer-os-link-active')
 
+    }
+})
