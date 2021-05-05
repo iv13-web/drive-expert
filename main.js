@@ -46,8 +46,6 @@ let mapSwiper = new Swiper('.slider-maps .swiper-container', {
     }
 });
 
-
-
 /* HEADER BLUR onScroll */
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
@@ -79,11 +77,10 @@ showTabsContent();
 
 
 document.querySelector('.offer-platforms').addEventListener('click', event => {
-
     const target = event.target;
-    if (target && target.classList.contains('offer-os-link') || target.classList.contains('offer-os')) {
 
-        selector.forEach((selector, i) => {
+    if (target && target.classList.contains('offer-os-link') || target.classList.contains('offer-os')) {
+        selector.forEach( (selector, i) => {
             if (target === selector) {
                 hideTabsContent();
                 showTabsContent(i);
