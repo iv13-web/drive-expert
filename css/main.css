@@ -603,7 +603,6 @@ section {
 }
 
 .offer-os {
-  padding-bottom: .9rem;
   position: relative;
   cursor: pointer;
 }
@@ -625,7 +624,21 @@ section {
   align-items: center;
   display: flex;
   color: #000;
+  padding-bottom: .9rem;
 }
+
+.fade {
+  animation-name: fade; 
+  animation-duration: .5s
+}
+
+@keyframes fade{
+  from{
+    opacity: 0.1
+  }
+  to{
+    opacity: 1
+  }}
 
 .offer-os-link-active {
   color: #E61830;
