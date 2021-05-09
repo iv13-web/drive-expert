@@ -5,7 +5,7 @@ function createModal(options) {
     modal.classList.add('modal');
     modal.insertAdjacentHTML('afterbegin', `
 
-        <div class="modal-overlay">
+        <div class="modal-overlay" data-close="close">
             <div class="modal-window">
                 <div class="modal-header">
                     <div class="modal-header-title">${options.title || ''}</div>
@@ -32,12 +32,12 @@ function createModal(options) {
 
 $.modal = function(options) {
 
-    
     let destroyed = false;
     let modalElement;
 
     const listener = event => {
-        event.target.dataset.close && modal.close();
+        const target = event.target;
+        target.dataset.close && modal.close();
     };
 
     const modal = {
@@ -54,13 +54,9 @@ $.modal = function(options) {
         close() {
             modalElement.classList.remove('open');
             document.querySelector('body').classList.remove('.modal-overflow')
-            setTimeout(() =>  modalElement.remove(), 1000);
+            setTimeout(() =>  modalElement.remove(), 200);
         }
     };
-
-   
-
-
 
     // возвращаем объект modal с дополнительными свойствами
     return Object.assign(modal, {
@@ -69,11 +65,6 @@ $.modal = function(options) {
             modalElement.remove();
             destroyed = true;
         },
-        
-        setContent(subtitle, content) {
-            modalElement.querySelector('[data-subtitle]').innerHTML = subtitle;
-            modalElement.querySelector('[data-content]').innerHTML = content;
-        }
     });
 };
 
