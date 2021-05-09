@@ -654,10 +654,12 @@ section {
 
 @keyframes fade{
   from{
-    opacity: 0.1
+    -webkit-filter: opacity(0.1);
+    opacity: 0.1;
   }
   to{
-    opacity: 1
+    -webkit-filter: opacity(1);
+    opacity: 1;
   }}
 
 .offer-os-link-active {
