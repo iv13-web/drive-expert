@@ -102,25 +102,12 @@ document.querySelectorAll('.card').forEach((card, i) => {
 
 /* TABLE (results) */
 const togglers = document.querySelectorAll('.table-toggle')
-const desc = document.querySelector('.table-body-descriptions').innerHTML
-
-// toggler.addEventListener('click', () => {
-//     toggler.classList.toggle('open')
-//     console.log(this);
-// });
-
-
-// toggler.forEach(toggler, ).addEventListener('click', function () {
-//     toggler.classList.toggle('open')
-//     console.log(this);
-// });
 
 togglers.forEach(toggler => {
 
     toggler.addEventListener('click', function () {
 
-
-
+       toggler.closest('.mobile-table-wrapper').classList.toggle('active')
 
     });
 })

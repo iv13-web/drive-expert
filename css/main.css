@@ -1604,6 +1604,21 @@ fill: #fff;
 
 
 
+
+
+
+
+
+.table-upside-mobile {
+  display: none;  
+}
+
+
+
+
+
+
+
 /* MEDIA QUERIES ------------------------------------------------------------------------------------------ */
 
 
@@ -1710,8 +1725,18 @@ fill: #fff;
 
 @media (max-width: 767px) {
 
-  .table-wrapper {
-    display: block;
+  .table-upside {
+    display: none;  
+  }
+
+  .table-upside-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
   }
   
 
