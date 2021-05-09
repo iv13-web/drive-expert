@@ -697,6 +697,13 @@ section {
 
 /*TABLE--------------------------------------------------*/
 
+
+.table-wrapper {
+  display: none;
+}
+
+
+
 .table-mobile {
   display: none;
 }
@@ -1703,14 +1710,10 @@ fill: #fff;
 
 @media (max-width: 767px) {
 
-  /* .table-mobile .table-descriptions-mobile, 
-  .table-mobile .table-body-stickers{
-    height: 0;
+  .table-wrapper {
+    display: block;
   }
-
-  .table-mobile {
-    height: 0;
-  } */
+  
 
   .table-toggle.open .table-offer-cell {
     height: 0;

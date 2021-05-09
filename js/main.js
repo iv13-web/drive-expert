@@ -118,7 +118,6 @@ const desc = document.querySelector('.table-body-descriptions').innerHTML
 togglers.forEach(toggler => {
 
     toggler.addEventListener('click', function () {
-        // toggler.classList.toggle('open')
 
 
 
