@@ -71,6 +71,7 @@ hideTabsContent();
 
 function showTabsContent(i = 0) {
     tables[i].classList.remove('hidden');
+    tables[i].classList.add('fade');
     selector[i].classList.add('offer-os-link-active');
 }
 showTabsContent();

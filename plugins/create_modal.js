@@ -53,7 +53,7 @@ $.modal = function(options) {
 
         close() {
             modalElement.classList.remove('open');
-            document.querySelector('body').classList.remove('.modal-overflow')
+            document.querySelector('body').classList.remove('modal-overflow')
             setTimeout(() =>  modalElement.remove(), 200);
         }
     };
