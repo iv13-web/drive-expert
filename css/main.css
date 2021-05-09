@@ -1739,11 +1739,32 @@ fill: #fff;
     border-bottom: 1px solid #ddd;
   }
   
+  .table-offer-cell {
+    transition: all .3s ease-in-out;  
+  }
 
-  .table-toggle.open .table-offer-cell {
+  .mobile-table-wrapper {
+    margin-bottom: 1.2rem;
+  }
+
+  .mobile-table-wrapper .table-offer-cell {
     height: 0;
-  } 
+    overflow: hidden;
+    border: 0;
+  }
   
+
+  .mobile-table-wrapper.active .table-offer-cell {
+    height: 7rem;;
+    overflow: inherit;
+    border-bottom: 1px solid #D3DEE7;
+  }
+
+
+
+
+
+
 
 
   .table-header {
