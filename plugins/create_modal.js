@@ -47,7 +47,7 @@ $.modal = function(options) {
 
             modalElement = createModal(options);
             modalElement.classList.add('open');
-            document.querySelector('body').classList.add('.modal-overflow');
+            document.querySelector('body').classList.add('modal-overflow');
             modalElement.addEventListener('click', listener);
         },
 

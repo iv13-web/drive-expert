@@ -13,6 +13,7 @@ function formatDate() {
     return `${d}.${m}.${y}`;
 }
 
+
 const cardModals = [{
     title: 'Change log for RaceChrono',
     date: formatDate(),

@@ -816,9 +816,9 @@ section {
 }
 
 .table-body-stickers{
-  align-items: center;
+  /* align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
   width: 25%;
 }
 
@@ -1109,6 +1109,7 @@ fill: #fff;
   height: 12px;
   width: 1px;
   position: absolute;
+  transition: all .5s ease;
 }
 
 .all-results-button:after {
@@ -1122,6 +1123,7 @@ fill: #fff;
   height: 1px;
   width: 12px;
   position: absolute;
+  transition: all .5s ease;
 }
 
 .all-results-text {
@@ -1130,7 +1132,7 @@ fill: #fff;
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: .06em;
-  transition: all, .3s ease;
+  transition: all, .5s ease;
 }
 
 .cicrle {
@@ -1141,12 +1143,16 @@ fill: #fff;
 }
 
 .all-results:hover .cicrle{
-
   stroke-dashoffset: 0;
 }
 
 .all-results:hover .all-results-text {
   color: #000;
+}
+
+.all-results:hover .all-results-button:before,
+.all-results:hover .all-results-button:after {
+  transform: rotate(180deg);
 }
 
 /* RACER CARDS---------------------------------------------------------------------- */
@@ -1724,6 +1730,22 @@ fill: #fff;
     display: none;  
   }
 
+  .table-body {
+    display: none;
+  }
+
+  .table-upside-left {
+    display: none;
+  }
+
+  .table-upside-marked:before {
+    display: none;
+  }
+
+  .table-upside-price {
+    display: none;
+  }
+
   .table-upside-mobile {
     display: flex;
     justify-content: space-between;
@@ -1739,6 +1761,9 @@ fill: #fff;
     transition: all .3s ease-in-out;  
   }
 
+  .table-offer-cell:last-child {
+    border-bottom: 1px solid #ddd;
+  }
 
   .mobile-table-wrapper {
     margin-bottom: 1.2rem;
@@ -1759,42 +1784,14 @@ fill: #fff;
   .mobile-table-wrapper.active .table-toggle:after {
     transform: rotate(90deg)
   }
-  
 
   .table-header {
     flex-direction: column;
     border: 0;
   }
 
-  .table-body {
-    display: none;
-  }
-
-  .table-upside {
-    justify-content: space-between;
-  }
-
-  .table-upside-left {
-    display: none;
-  }
-
-  .table-upside-marked:before {
-    display: none;
-  }
-
-  .table-upside {
-    width: 100%;
-    flex-direction: row;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
   .table-sum {
     line-height: 1;
-  }
-
-  .table-upside-price {
-    display: none;
   }
 
   .table-upside-item-wrapper {
@@ -1866,8 +1863,9 @@ fill: #fff;
     width: 90%;
   }
 
-  .table-body-stickers {
-    width: 10%;
+  .table-body-stickers .table-offer-cell {
+    justify-content: flex-end;
+    padding-right: 1rem;
   }
 
   .table-descriptions-mobile .table-offer-cell {
@@ -2045,74 +2043,6 @@ fill: #fff;
   .map-content {
     height: 95%;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* .table-upside-item-wrapper {
-
-    display: block;
-
-  }
-
-  .table-upside-title {
-    margin: 0 0 .8rem 0
-  }
-
-  .table-header {
-    flex-direction: column;
-    border: 0;
-  }
-
-
-  .table-upside {
-    justify-content: space-between;
-  } */
-
-
-
-  /* .table-upside {
-    width: 100%;
-    flex-direction: row;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-  } */
-
-
-  .table-upside-item-wrapper {
-    text-align: initial;
-    width: 40%;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   .results-member {
     min-width: 20rem;

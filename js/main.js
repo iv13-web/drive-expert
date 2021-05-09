@@ -101,13 +101,11 @@ document.querySelectorAll('.card').forEach((card, i) => {
 });
 
 /* TABLE (results) */
-const togglers = document.querySelectorAll('.table-toggle')
 
-togglers.forEach(toggler => {
+document.querySelectorAll('.table-toggle').forEach(toggler => {
 
-    toggler.addEventListener('click', function () {
+    toggler.addEventListener('click', () => {
 
-       toggler.closest('.mobile-table-wrapper').classList.toggle('active')
-
+       toggler.closest('.mobile-table-wrapper').classList.toggle('active');
     });
-})
+}); 
