@@ -1,14 +1,5 @@
 function createModal(options) {
 
-    // const modalContent = document.querySelector('.modal').innerHTML;
-    // document.querySelector('.modal').remove();
-
-    // const title = document.querySelector('[data-title]');
-    // const date = document.querySelector('[data-date]');
-    // const subtitle = document.querySelector('[data-subtitle]');
-    // const content = document.querySelector('[data-content]');
-
-
 
     const modal = document.createElement('div');
     modal.classList.add('modal');
@@ -31,9 +22,8 @@ function createModal(options) {
                 ${options.closable ? `<div class="modal-close" data-close="close"></div>` : ''}  
             </div>
         </div>
+
     `);
-
-
 
     document.querySelector('body').insertAdjacentElement('beforeend', modal);
     return modal;
@@ -42,27 +32,34 @@ function createModal(options) {
 
 $.modal = function(options) {
 
-    const modalElement = createModal(options);
+    
     let destroyed = false;
-
-    const modal = {
-        open() {
-            destroyed && console.log('Destroyed');
-            modalElement.classList.add('open');
-            document.querySelector('body').classList.add('.modal-overflow')
-        },
-
-        close() {
-            modalElement.classList.remove('open');
-            document.querySelector('body').classList.remove('.modal-overflow')
-        }
-    };
+    let modalElement;
 
     const listener = event => {
         event.target.dataset.close && modal.close();
     };
 
-    modalElement.addEventListener('click', listener);
+    const modal = {
+
+        open() {
+            destroyed && console.log('Destroyed');
+
+            modalElement = createModal(options);
+            modalElement.classList.add('open');
+            document.querySelector('body').classList.add('.modal-overflow');
+            modalElement.addEventListener('click', listener);
+        },
+
+        close() {
+            modalElement.classList.remove('open');
+            document.querySelector('body').classList.remove('.modal-overflow')
+            setTimeout(() =>  modalElement.remove(), 1000);
+        }
+    };
+
+   
+
 
 
     // возвращаем объект modal с дополнительными свойствами
@@ -79,3 +76,6 @@ $.modal = function(options) {
         }
     });
 };
+
+
+

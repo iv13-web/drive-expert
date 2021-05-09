@@ -1103,11 +1103,17 @@ fill: #fff;
   transition: all, .3s ease;
 }
 
-/* .circle {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  transition: all 2s cubic-bezier(0.16, 1.08, 0.38, 0.98);
-} */
+.cicrle {
+  
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  transition: all 1s ease;
+}
+
+.all-results:hover .cicrle{
+
+  stroke-dashoffset: 0;
+}
 
 .all-results:hover .all-results-text {
   color: #000;
@@ -1668,7 +1674,7 @@ fill: #fff;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header {
     border-bottom: 1px solid rgba(255,255,255,.3);
   }
