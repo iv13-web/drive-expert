@@ -23,7 +23,7 @@ let racersSwiper = new Swiper('.slider-racers', {
 });
 
 let mapSwiper = new Swiper('.slider-maps', {
-
+    slidesPerView: 1,
     pagination: {
       el: '.map-pagination',
       clickable: true
