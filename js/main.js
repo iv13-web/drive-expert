@@ -1,8 +1,8 @@
-let racersSwiper = new Swiper('.slider-racers .swiper-container', {
+let racersSwiper = new Swiper('.slider-racers', {
     slidesPerView: 3,
     spaceBetween: 50,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.racer-pagination',
       clickable: true
     },
     navigation: {
@@ -22,28 +22,16 @@ let racersSwiper = new Swiper('.slider-racers .swiper-container', {
     }
 });
 
-let mapSwiper = new Swiper('.slider-maps .swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 50,
+let mapSwiper = new Swiper('.slider-maps', {
+
     pagination: {
-      el: '.swiper-pagination',
+      el: '.map-pagination',
       clickable: true
     },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    breakpoints: {
-      0: {
-        slidesPerView: 1
-      }, 
-      1000: {
-          slidesPerView: 2
-      },
-      1200: {
-          slidesPerView: 3
-      }
-    }
 });
 
 /* HEADER BLUR onScroll */

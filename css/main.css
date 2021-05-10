@@ -843,6 +843,10 @@ section {
 
 /*MAP*---------------------------------------------------------------------------*/
 
+.map-pagination {
+  text-align: center;
+}
+
 .map-section {
   position: relative;
 }
@@ -1251,6 +1255,10 @@ fill: #fff;
 .swiper-pagination {
   position: relative;
   width: 100%;
+}
+
+.racer-pagination {
+  text-align: center;
 }
 
 .swiper-pagination-bullet {
