@@ -29,8 +29,8 @@ let mapSwiper = new Swiper('.slider-maps', {
       clickable: true
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.map-section .swiper-button-next',
+      prevEl: '.map-section .swiper-button-prev',
     },
 });
 
