@@ -6,8 +6,8 @@ let racersSwiper = new Swiper('.slider-racers', {
       clickable: true
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.racers-slider .swiper-button-next',
+      prevEl: '.racers-slider .swiper-button-prev',
     },
     breakpoints: {
       0: {
