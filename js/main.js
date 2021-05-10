@@ -63,7 +63,6 @@ const tables = document.querySelectorAll('.table');
 const selector = document.querySelectorAll('.offer-os-link');
 
 function hideTabsContent() {
-    tables.forEach(tab => tab.classList.remove('fade'));
     tables.forEach(tab => tab.classList.add('hidden'));
     selector.forEach(tab => tab.classList.remove('offer-os-link-active'));
 }
@@ -72,7 +71,6 @@ hideTabsContent();
 
 function showTabsContent(i = 0) {
     tables[i].classList.remove('hidden');
-    tables[i].classList.add('fade');
     selector[i].classList.add('offer-os-link-active');
 }
 showTabsContent();
