@@ -1183,7 +1183,7 @@ fill: #fff;
   font-size: 1.6rem;
 }
 
-/* SWIPER SLIDER---------------------------------------------------------------------- */
+/* SWIPER SLIDERS---------------------------------------------------------------------- */
 
 .slider-container {
   margin: 0 auto;
@@ -1199,20 +1199,20 @@ fill: #fff;
   padding: 10px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.racers-slider .swiper-button-prev,
+.racers-slider .swiper-button-next {
   top: 55%;
 }
 
-.swiper-button-prev {
+.racers-slider .swiper-button-prev {
   left: -10rem;
 } 
 
-.swiper-button-next {
+.racers-slider .swiper-button-next {
   right: -10rem;
 } 
 
-.racer-button {
+.slider-button {
   background-color: #ddd;
   border-radius: 50%;
   outline: none;
@@ -1220,16 +1220,16 @@ fill: #fff;
   z-index: 2;
 }
 
-.racer-button svg {
+.slider-button svg {
   position: absolute;
   z-index: 3;
 }
 
-.racer-button:first-child {
+.slider-button:first-child {
   margin-right: 1.6rem;
 }
 
-.racer-button:before {
+.slider-button:before {
   border-radius: 50%;
   content: "";
   height: 0;
@@ -1240,7 +1240,7 @@ fill: #fff;
   width: 0;
 }
 
-.racer-button:hover:before {
+.slider-button:hover:before {
   background-color: #E61830;
   height: 120%;
   margin-left: -3.22rem;
@@ -1248,7 +1248,7 @@ fill: #fff;
   width: 120%;
 }
 
-.racer-button:hover svg path {
+.slider-button:hover svg path {
   fill: #fff;
 }
 
@@ -1651,7 +1651,7 @@ fill: #fff;
     max-height: 72rem;
   }
 
-  .racer-button {
+  .slider-button {
     display: none;
   }
 }
