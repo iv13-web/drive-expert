@@ -88,8 +88,8 @@ document.querySelectorAll('.card').forEach((card, i) => {
     });
 });
 
-/* TABLE (results) */
 
+/* TABLE (results) */
 document.querySelectorAll('.table-toggle').forEach(toggler => {
 
     toggler.addEventListener('click', () => {
