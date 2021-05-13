@@ -105,10 +105,6 @@ section {
   display: none;
 }
 
-.remove {
-  height: 0;
-  overflow: hidden;
-}
 
 /*MOBILE-MENU*/
 
@@ -1430,6 +1426,10 @@ section {
   width: 32px;
 }
 
+.mobile-menu-active .burger span {
+  transition: all .3s ease;
+}
+
 .burger span, 
 .burger span:before, 
 .burger span:after {
@@ -1462,7 +1462,7 @@ section {
 .stop-scrolling .burger span:after {
   background: #000;
   content: "";
-  transition: top .3s, background .5s, transform .3s .3s cubic-bezier(0, -0.55, 0, 1.55);
+  transition: top .3s, background .7s, transform .3s .3s cubic-bezier(0, -0.55, 0, 1.55);
 }
 
 .stop-scrolling .burger span:before {

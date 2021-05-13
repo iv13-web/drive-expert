@@ -23,7 +23,7 @@ let racersSwiper = new Swiper('.slider-racers', {
 });
 
 let mapSwiper = new Swiper('.slider-maps', {
-    slidesPerView: 1,
+
     pagination: {
       el: '.map-pagination',
       clickable: true
@@ -40,6 +40,8 @@ window.addEventListener('scroll', () => {
     window.scrollY > 20 && header.classList.add('header-scroll');
     window.scrollY === 0 && header.classList.remove('header-scroll');
 });
+
+/* BURGER MENU interactive */
 document.querySelector('.burger').addEventListener('click', () => {
     document.querySelector('.mobile-menu').classList.toggle('mobile-menu-active');
     document.querySelector('body').classList.toggle('stop-scrolling');
