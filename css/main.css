@@ -115,7 +115,7 @@ section {
   height: 0;
   width: 100%;
   top: 0;
-  transition: all .4s ease;
+  transition: all .3s ease;
   overflow: hidden;
 }
 
@@ -1424,10 +1424,6 @@ section {
   display: none;
   position: relative;
   width: 32px;
-}
-
-.mobile-menu .burger span {
-  transition: background .3s ease;
 }
 
 .burger span, 
